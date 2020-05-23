@@ -1,24 +1,3 @@
 # recipes-app
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Experimenting with [Cordova](https://github.com/topics/cordova) and [Vue.js](https://github.com/topics/vue)

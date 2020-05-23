@@ -3,4 +3,7 @@ module.exports = {
   pluginOptions: {
     cordovaPath: 'src-cordova',
   },
+  transpileDependencies: [
+    'vuetify',
+  ],
 };
