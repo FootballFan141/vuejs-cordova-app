@@ -2,6 +2,7 @@
   <div id="container">
     <Toolbar title="Recipes Dashboard"/>
     <div id="app">
+      <NavigationDrawer />
       <Content />
     </div>
   </div>
@@ -9,12 +10,14 @@
 
 <script>
 import Toolbar from './components/Toolbar.vue';
+import NavigationDrawer from './components/NavigationDrawer.vue';
 import Content from './components/Content.vue';
 
 export default {
   name: 'App',
   components: {
     Toolbar,
+    NavigationDrawer,
     Content,
   },
 };

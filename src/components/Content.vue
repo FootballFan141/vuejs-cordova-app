@@ -4,7 +4,7 @@
       <v-list-item two-line class="recipe-list-item"
           v-for="(recipe) in recipes"
           :key="recipe.id">
-        <v-list-item-content>
+        <v-list-item-content v-model="recipes">
           <v-list-item-title class="recipe-title">
               {{ recipe.title }}
           </v-list-item-title>
@@ -18,19 +18,28 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
+
 export default {
   name: 'Content',
   props: {
   },
   data: () => ({
-    recipes: [
-      { id: 0, title: 'slow cooker mashed potatoes' },
-      { id: 1, title: 'Chicken Parmesan' },
-    ],
   }),
+  computed: {
+    recipes: {
+      get() {
+        return this.$store.getters.recipes;
+      },
+      set(v) {
+        return v;
+      },
+    },
+  },
   methods: {
+    ...mapMutations(['deleteRecipe']),
     deleteRecipe(recipe) {
-      this.recipes.splice(this.recipes.indexOf(recipe), 1);
+      this.$store.commit('deleteRecipe', recipe);
     },
   },
 };
