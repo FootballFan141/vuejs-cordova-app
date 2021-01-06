@@ -27,7 +27,7 @@
     "sign-apk": "env-cmd -f ./.env.local -x apksigner sign --ks $KEYSTORE ./src-cordova/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5",
